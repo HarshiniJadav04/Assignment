@@ -27,6 +27,13 @@ class StackDS{
         console.log(`${this.elements[this.count -1]} is the element on the top of the stack`);
         return this.elements[ this.count - 1];
     }
+
+    stacksize()
+    {
+        //returns the size of the stack
+        console.log(`The size of the stack is ${this.count}`);
+        return this.count;
+    }
 }
 
 let stack = new StackDS(); 

@@ -14,17 +14,22 @@ class StackDS{
         return this.count - 1; 
         } else
         {
-            console.log(`You have reached the maximum limit ${this.maxlimit}`)
+            console.log(`You have reached the maximum limit ${this.maxlimit}`);
         }   
     }
 
     stackPop()
     {
+        if(this.count == 0){
+        return console.log("There are no elements in the stack");
+        } else
+        {
         // Remove the top most element and return that value
         let deleteElement = this.elements[this.count - 1];
         this.count = this.count - 1;
         console.log(`${deleteElement} is removed from the stack`);
         return deleteElement;
+        }
     }
 
     stackPeek()
@@ -46,8 +51,8 @@ let stack = new StackDS();
 stack.stackPush(10);
 stack.stackPush(20);
 stack.stackPush(30);
-stack.stackPeek();
 stack.stackPush(40);
+stack.stackPeek();
 stack.stackPush(50);
 stack.stackPush(60);
 stack.stackPop();
